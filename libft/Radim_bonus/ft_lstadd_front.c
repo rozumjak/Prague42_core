@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:51:59 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/09/17 21:14:09 by jrozumek         ###   ########.fr       */
+/*   Created: 2023/10/24 20:54:35 by rludvik           #+#    #+#             */
+/*   Updated: 2023/10/27 16:48:00 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-/*
-void	ft_putstr(char *str);
+#include "libft.h"
 
-int	main(void)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char	str[] = "Amigo\n\n";
-
-	ft_putstr(str);
-	return (0);
-}
-*/
-
-void	ft_putstr(char *str)
-{
-	int	strlen;
-
-	strlen = 0;
-	while (str[strlen] != '\0')
-		strlen++;
-	write(1, str, strlen);
+	if (!new || !lst)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

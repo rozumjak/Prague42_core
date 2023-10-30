@@ -26,11 +26,16 @@ files 	   = ft_strlen \
 			 ft_putchar_fd \
 			 ft_putstr_fd \
 			 ft_putendl_fd \
+			 ft_putnbr_fd \
+			 ft_itoa \
+			 ft_strjoin \
+			 ft_substr \
+			 ft_strmapi \
 			 
 
 Compiler	= gcc
 
-CmpFlags	= -Wall -Wextra -Werror
+//CmpFlags	= -Wall -Wextra -Werror
 
 OUTN	= $(Library).a
 

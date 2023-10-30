@@ -1,61 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:51:59 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/09/17 21:51:07 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:39:13 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+static void	printnbr(int nb, int fd);
+
+/*
 #include <unistd.h>
 
-void	ft_putnbr(int nb);
-void	printnbr(int nb);
-void	ft_putchar(int nb);
-/*
+void	ft_putnbr_fd(int nb, int fd);
+
 int	main(void)
 {
-	ft_putnbr(-2147483648);
+	ft_putnbr_fd(0, 1);
 	return (0);
 }
 */
 
-void	ft_putnbr(int nb)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb < 0 && nb > -2147483648)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		nb = -nb;
-		printnbr(nb);
+		printnbr(nb, fd);
 	}
 	else if (nb == -2147483648)
-		write(1, "-2147483648", 11);
-	else if (nb == 0)
-		write(1, "0", 1);
+		write(fd, "-2147483648", 11);
 	else
-		printnbr(nb);
+		printnbr(nb, fd);
 }
 
-void	printnbr(int nb)
+static void	printnbr(int nb, int fd)
 {
 	if (nb < 10)
 	{
-		ft_putchar(nb);
+		ft_putchar_fd(nb + '0', fd);
 	}
 	else
 	{
-		printnbr(nb / 10);
-		ft_putchar(nb % 10);
+		printnbr(nb / 10, fd);
+		ft_putchar_fd((nb % 10) + '0', fd);
 	}
-}
-
-void	ft_putchar(int nb)
-{
-	char	c;
-
-	c = nb + 48;
-	write(1, &c, 1);
 }
