@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:19:40 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/25 13:44:08 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:17:29 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,27 @@
 # include <stddef.h>
 # include <stdint.h>
 
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
+
+
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+int	ft_lstsize(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+char	**ft_split(char const *s, char c);
+char    *ft_strtrim(char const *s1, char const *set);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);

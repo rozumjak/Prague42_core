@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:45:27 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/11/03 14:14:08 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:18:39 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,42 +17,37 @@
 #include <stddef.h> 
 #include <stdlib.h> 
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+
 
 int	main(void)
 {
-	char const	*s1 = {"Hello, world. How You Doing?"};
-	unsigned int	index = 100;
-	size_t		len = 1;
-	printf("%s\n", ft_substr(s1, index, len));
+	char const	*s1 = {"cbaHouabc"};
+	char const	*set = {"abc"};
+
+	printf("%s\n", ft_strtrim(s1, set));
 	return (0);
 }
 */
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*sub;
-	size_t	i;
-	size_t	j;
+	char	*trim;
+	int		i;
+	int		j;
 
-	sub = NULL;
+	trim = NULL;
 	i = 0;
-	j = 0;
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		len = 0;
-	else if (len >= ft_strlen(s))
-		len = ft_strlen(s) - start;
-	sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (sub == NULL)
-		return (NULL);
-	while (s[i])
-	{
-		if (i >= start && j < len)
-			sub[j++] = s[i];
+	j = ft_strlen(s1);
+	if (!s1)
+		return (trim);
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	}
-	sub[j] = '\0';
-	return (sub);
+	while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
+		j--;
+	trim = (char *)malloc(sizeof(char) * (j - i + 1));
+	if (trim == NULL)
+		return (NULL);
+	ft_strlcpy(trim, &s1[i], j - i + 1);
+	return (trim);
 }
