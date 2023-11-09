@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:19:27 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/27 15:32:06 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:30:06 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(void)
 	return 0;
 }	
 */
+
+// ft_putchar_fd() outputs the character 'c' to the given file descriptor "fd".
 
 void	ft_putchar_fd(char c, int fd)
 {

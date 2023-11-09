@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:20:10 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/11/02 13:39:34 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:19:49 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ int	main(void)
 	return (0);
 }
 */
+
+/* ft_striteri() applies the function 'f' on each character of the string 
+ * passed as argument, passing its index as first argument. Each character 
+ * is passed by address to 'f' to be modified if necessary.
+ */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:08:18 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/25 17:48:15 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:07:30 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int     main(void)
         printf("res: %s", ft_strrchr(s, 'l'));
         return (0);
 }*/
+
+/* strrchr() function returns a pointer to the last occurrence 
+ * of the character 'c' in the string 's'.
+ */
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:56:17 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/11/03 14:55:03 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:07:50 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int	main(void)
 	return (0);
 }
 */
+
+/* 
+ * ft_itoa() allocates and returns a string representing the integer 
+ * received as an argument (including negative numbers).
+ */
 
 char	*ft_itoa(int n)
 {

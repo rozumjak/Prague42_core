@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:27:57 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/11/03 15:35:30 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:09:18 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ int	main()
 }
 */
 
+/*
+ * ft_split() allocates and returns an array of strings obtained 
+ * by splitting 's' using the character 'c' as a delimiter. 
+ * The array must end with a NULL pointer.
+ */
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -64,6 +70,11 @@ char	**ft_split(char const *s, char c)
 	res[i] = NULL;
 	return (res);
 }
+
+/*
+ * word_count() scanes through string 's' and counts the amount of 
+ * string sections deliminated by char 'c'.
+ */
 
 static size_t	word_count(char const *s, char c)
 {

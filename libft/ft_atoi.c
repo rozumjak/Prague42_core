@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:59 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 14:52:35 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:52:40 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ int	main(void)
 }
 */
 
+/* 
+ * ft_atoi() function converts the initial portion of
+ * the string pointed to by "str" to int.
+ */
+
+static int	ft_isspace(const char c);
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -37,8 +44,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\r' || str[i] == '\f'
-		|| str[i] == '\v' || str[i] == '\t' || str[i] == '\n')
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -52,4 +58,15 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result);
+}
+
+// ft_isspace() function checks whether the given 'c' is whitspace.
+
+static int	ft_isspace(const char c)
+{
+	if (c == ' ' || c == '\r' || c == '\f'
+		|| c == '\v' || c == '\t' || c == '\n')
+		return (1);
+	else
+		return (0);
 }

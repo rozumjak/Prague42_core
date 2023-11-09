@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:08:18 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/25 16:13:50 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:10:08 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,17 @@ char	*ft_strchr(const char *s, int c);
 
 int	main(void)
 {
-	char s[] = "tripouille";
+	char s[] = "tripouille"chr;
 
 	printf("res: %s", ft_strchr(s, 't' + 256));
 	return (0);
 }
 */
+
+/* 
+ * ft_strchr() function returns a pointer to the first occurrence 
+ * of the character 'c' in the string 's'.
+ */
 
 char	*ft_strchr(const char *s, int c)
 {

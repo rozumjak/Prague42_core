@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:37:28 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 15:26:31 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:16:29 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,24 @@ int main(void)
 }
 */
 
+/*
+ * ft_memmove() function copies 'n' bytes from memory area "src" to memory 
+ * area "dest". The memory areas may overlap.
+ */
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
 	size_t			i;
 
 	i = n;
-	s = (unsigned char *)src;
-	d = (unsigned char *)dest;
-	if (s < d)
+	if (dest == NULL && src == NULL)
+		return (NULL);
+	if (src < dest)
 	{
 		while (i > 0)
 		{
 			i--;
-			d[i] = s[i];
+			((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
 		}
 	}
 	else
@@ -54,7 +57,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			d[i] = s[i];
+			((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
 			i++;
 		}
 	}

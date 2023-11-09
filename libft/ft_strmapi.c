@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:20:10 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/30 17:57:33 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:52:06 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ int	main(void)
 }
 */
 
+/*
+ * ft_strmapi() applies the function 'f' to each character 
+ * of the string 's', and passing its index as first argument 
+ * to create a new string (with malloc(3)), resulting from 
+ * successive applications of 'f'.
+ */
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*res;
@@ -44,6 +51,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
+
 /*
 char	toupperr(unsigned int i, char c)
 {

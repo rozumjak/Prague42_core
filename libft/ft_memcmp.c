@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:19:53 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 15:31:40 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:17:16 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ int	main(void)
 	printf("memncmp: %i\n", memcmp(s1, s2, n));
 }
 */
+
+/*
+ * ft_memcmp() function compares the first 'n' bytes 
+ * (each interpreted as unsigned char) of the memory areas "s1" and "s2".
+ */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

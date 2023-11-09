@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:45:27 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/30 14:13:19 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:23:57 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int	main(void)
 	return (0);
 }
 */
+
+/*
+ * ft_strjoin() allocates (with malloc(3)) and returns a new string, 
+ * which is the result of the concatenation of "s1" and "s2".
+ */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

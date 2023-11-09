@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:51:59 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/30 10:39:13 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:35:24 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(void)
 	return (0);
 }
 */
+
+// ft_putnbr_fd() outputs the integer 'n' to the given file descriptor "fd".
 
 void	ft_putnbr_fd(int nb, int fd)
 {

@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:37:28 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 15:37:48 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:23:50 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ int main(void)
 }
 */
 
+/*
+ * ft_memcpy() function copies 'n' bytes from memory area "src" to 
+ * memory area "dest". The memory areas must not overlap.
+ */
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*d;
@@ -41,6 +46,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	s = (char *)src;
 	d = (char *)dest;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = s[i];

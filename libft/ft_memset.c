@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:37:28 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 15:37:19 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:27:36 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int main(void)
 	return (0);
 }
 */
+
+/*
+ * ft_memset() function fills the first 'n' bytes of the memory 
+ * area pointed to by 's' with the constant byte 'c'.
+ */
 
 void	*ft_memset(void *s, int c, size_t n)
 {

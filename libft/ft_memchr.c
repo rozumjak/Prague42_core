@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:37:28 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/24 15:27:46 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:12:34 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ int main(void)
 	return (0);
 }
 */
+
+/*
+ * ft_memchr() function scans the initial 'n' bytes of the memory 
+ * area pointed to by 's' for the first instance of 'c'.
+ */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

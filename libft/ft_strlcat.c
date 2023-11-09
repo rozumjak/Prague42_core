@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 14:31:48 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/25 20:07:30 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:41:44 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ int	main(void)
 	return (0);
 }
 */
+
+/* ft_strlcat() function appends the NUL-terminated string "src" 
+ * to the end of "dest". It will append at most 
+ * "size" - strlen(dst) - 1 bytes, NUL-terminating the result.
+ * The function returns initial length of "dest" plus the length of "src".
+ */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

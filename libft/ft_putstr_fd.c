@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:19:27 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/27 15:45:19 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:39:43 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(void)
 	return 0;
 }	
 */
+
+// ft_putstr_fd() outputs the string 's' to the given file descriptor "fd".
 
 void	ft_putstr_fd(char *s, int fd)
 {

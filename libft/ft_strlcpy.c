@@ -39,6 +39,12 @@ int	main(void)
 }
 */
 
+/*
+ * ft_strlcpy() function copies up to "size" - 1 characters from 
+ * the NUL-terminated string "src" to "dest", NUL-terminating the result.
+ * The function returns length of "src".
+ */
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;

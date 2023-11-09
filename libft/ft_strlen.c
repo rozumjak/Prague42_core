@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:09:00 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/10/25 15:28:59 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:43:58 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ int	main(void)
 	return (0);
 }
 */
+
+/*
+ * ft_strlen() function calculates the length of the string pointed 
+ * to by "str", excluding the terminating null byte ('\0').
+ */
 
 size_t	ft_strlen(const char *str)
 {

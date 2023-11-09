@@ -6,7 +6,7 @@
 /*   By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:45:27 by jrozumek          #+#    #+#             */
-/*   Updated: 2023/11/02 15:18:39 by jrozumek         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:36:40 by jrozumek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ int	main(void)
 	return (0);
 }
 */
+
+/*
+ * ft_strtrim() allocates (with malloc(3)) and returns a copy of "s1" 
+ * with the characters specified in "set" removed from the beginning 
+ * and the end of the string.
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
