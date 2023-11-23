@@ -6,7 +6,7 @@
 #    By: jrozumek <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 14:48:34 by jrozumek          #+#    #+#              #
-#    Updated: 2023/11/08 15:30:22 by jrozumek         ###   ########.fr        #
+#    Updated: 2023/11/23 12:54:30 by jrozumek         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,5 +92,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 # if there is a file called all clean etc. - it will not mess up the code
